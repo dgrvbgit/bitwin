@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BitWin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <header class="cabecera">
+        <div class="logo-zona">
+            <div class="logo-img">
+
+            </div>
+            <span class="nombre-sitio">BITWIN</span>
+        </div>
+        <div class="botones-derecha">
+            <button class="btn-registrarse" onclick="abrirVentana('ventana-registro')">Registrarse</button>
+            <button class="btn-login" onclick="abrirVentana('ventana-login')">Iniciar Sesión</button>
+        </div>
+    </header>
+
+    <main class="cuerpo">
+        <div class="secciones">
+
+
+            <section class="tarjeta">
+                <div class="tarjeta-titulo">Qué es BitWin?</div>
+                <div class="tarjeta-contenido">
+                    <p>BitWin es un casino virtual con estetica Pixel Art donde puedes moverte libremente por una sala 2D interactiva.</p>
+                    <p>Explora la sala, accede a las máquinas de juego (tragaperras, blackjack y dados) e interactua con el mostrador para reclamar tu bono diario de monedas.</p>
+                    <p>Canjea tus monedas virtuales en el market por cosméticos, ventajas de juego y mejoras para tu personaje.</p>
+                    <p>Sin dinero real, sin riesgos. Solo habilidad, suerte y estrategia.</p>
+                </div>
+            </section>
+
+            <section class="tarjeta">
+                <div class="tarjeta-titulo">Cómo Jugar</div>
+                <div class="tarjeta-contenido">
+                    <!-- Cuando esten ya programados los controles del juego -->
+                </div>
+            </section>
+
+            <section class="tarjeta">
+                <div class="tarjeta-titulo">Q&amp;A</div>
+                <div class="tarjeta-contenido">
+                    <!-- Para cuando las tenga hechas -->
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <button class="btn-bajar" onclick="bajarPagina()">&#9660;</button>
+
+    <footer class="pie-pagina">
+        <p>BitWin &copy; 2026 &mdash; TFG DAW &mdash; Darío Galván Rodríguez</p>
+    </footer>
+
+
+    <div class="ventana-fondo" id="ventana-registro">
+        <div class="ventana-caja">
+            <button class="cerrar-ventana" onclick="cerrarVentana('ventana-registro')">X</button>
+            <h2 class="ventana-titulo">Crear cuenta</h2>
+            <form id="form-registro">
+                <div class="campo-grupo">
+                    <label>Nombre de usuario</label>
+                    <input type="text" id="reg-username" placeholder="jugador123" required>
+                </div>
+                <div class="campo-grupo">
+                    <label>Email</label>
+                    <input type="email" id="reg-email" placeholder="tu@email.com" required>
+                </div>
+                <div class="campo-grupo">
+                    <label>Contrasena</label>
+                    <input type="password" id="reg-password" placeholder="min. 6 caracteres" required>
+                </div>
+                <p class="mensaje-form" id="msg-registro"></p>
+                <button type="submit" class="btn-enviar">Registrarse</button>
+            </form>
+            <p class="cambiar-ventana">Ya tienes cuenta? <a href="#" onclick="switchVentana('ventana-registro','ventana-login')">Inicia sesión</a></p>
+        </div>
+    </div>
+
+    <div class="ventana-fondo" id="ventana-login">
+        <div class="ventana-caja">
+            <button class="cerrar-ventana" onclick="cerrarVentana('ventana-login')">X</button>
+            <h2 class="ventana-titulo">Iniciar sesión</h2>
+            <form id="form-login">
+                <div class="campo-grupo">
+                    <label>Email</label>
+                    <input type="email" id="login-email" placeholder="tu@email.com" required>
+                </div>
+                <div class="campo-grupo">
+                    <label>Contraseña</label>
+                    <input type="password" id="login-password" placeholder="tu contrasena" required>
+                </div>
+                <p class="mensaje-form" id="msg-login"></p>
+                <button type="submit" class="btn-enviar">Entrar</button>
+            </form>
+            <p class="cambiar-ventana">No tienes cuenta? <a href="#" onclick="switchVentana('ventana-login','ventana-registro')">Registrate</a></p>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
